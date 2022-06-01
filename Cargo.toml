@@ -1,0 +1,10 @@
+[package]
+name = "ocaml-rs-link"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+ocaml = {path = "../ocaml-rs"}
+
+[build-dependencies]
+ocaml-build = {path = "../ocaml-rs/build", features=["dune"]}

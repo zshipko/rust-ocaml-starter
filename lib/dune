@@ -1,0 +1,5 @@
+(executable
+ (name link)
+ (public_name link)
+ (modes exe object))
+ ;(modes exe (native shared_object)))
