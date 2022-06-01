@@ -9,9 +9,9 @@ If you're looking for an example of calling into Rust from OCaml take a look at 
 - [ ] Update `README.md`
 - [ ] Update the project name in `dune-project`
 - [ ] Update the crate name in `Cargo.toml`
-- [ ] Update `lib/dune` and `lib/dune` with the name of your project in place of `rust_ocaml_example`/`rust-ocaml-example`
+- [ ] Update `lib/dune` and `lib/dune` with the name of your project in place of `rust_ocaml_starter`/`rust-ocaml-starter`
 - [ ] Rename `rust-ocaml-starter.opam` to match the name of your project
-- [ ] Remove `lib/rust_ocaml_example.ml` add your own OCaml files
+- [ ] Remove `lib/rust_ocaml_starter.ml` add your own OCaml files
 - [ ] Edit `src/lib.rs`
 
 Many of the renaming steps can be automated using `init.sh`:
