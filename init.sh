@@ -16,5 +16,5 @@ replace 's/rust-ocaml-starter/'"$public_name"'/g' lib/dune
 replace 's/rust-ocaml-starter/'"$public_name"'/g' Cargo.toml
 printf "# $public_name\n" > README.md
 mv rust-ocaml-starter.opam $public_name.opam
-mv src/ocaml_rust_starter.ml src/$name.ml
+mv lib/rust_ocaml_starter.ml lib/$name.ml
 rm init.sh
