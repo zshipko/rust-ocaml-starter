@@ -1,3 +1,3 @@
 pub fn main() {
-    ocaml_build::Dune::new(".", "lib").build()
+    ocaml_build::Dune::new("lib").build()
 }

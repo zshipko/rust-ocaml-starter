@@ -1,5 +1,4 @@
 (executable
- (name link)
- (public_name link)
+ (name rust_ocaml_starter)
+ (public_name rust-ocaml-starter)
  (modes exe object))
- ;(modes exe (native shared_object)))
