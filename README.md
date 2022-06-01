@@ -2,6 +2,8 @@
 
 An example project using [ocaml-rs](https://github.com/zshipko/ocaml-rs) to link an OCaml library into a Rust program.
 
+If you're looking for an example of calling into Rust from OCaml take a look at [ocaml-rust-starter](https://github.com/zshipko/ocaml-rust-starter)
+
 ## New project checklist
 
 - [ ] Update `README.md`
