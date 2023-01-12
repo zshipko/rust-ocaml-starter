@@ -25,6 +25,16 @@ $ ./init.sh my_project my-project
 NOTE: `init.sh` is destructive and can only be executed once (it will remove itself) - make sure you have no modifications that you want to keep before running `init.sh`.
 
 ## Building
+Optionally create a local OPAM switch (choose the version you prefer):
+
+```
+opam update
+opam switch create . ocaml-base-compiler.4.14.0
+eval $(opam env) && opam switch
+opam install dune
+```
+
+Then:
 
     cargo build
 
