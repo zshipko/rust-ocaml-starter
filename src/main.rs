@@ -24,8 +24,8 @@ ocaml::import! {
 // to) wrap, we would use `ocaml::Value` for it.
 #[derive(ocaml::ToValue, ocaml::FromValue, Debug)]
 pub struct MyStructT {
-    a: ocaml::Int,
-    b: ocaml::Float,
+    a: ocaml::Float,
+    b: ocaml::Int,
 }
 
 ocaml::import! {
@@ -39,6 +39,6 @@ fn main() {
         println!("hello_world: {}", hello_world(&gc).unwrap());
         println!("maybe_inc: {:?}", maybe_inc(&gc, T::B(1)).unwrap());
         println!("maybe_inc_ref: {:?}", maybe_inc_ref(&gc, &T::B(1)).unwrap());
-        println!("mystruct_inc_both: {:?}", mystruct_inc_both(&gc, MyStructT{a: 1, b: 2.0}).unwrap());
+        println!("mystruct_inc_both: {:?}", mystruct_inc_both(&gc, MyStructT{a: 1.0, b: 2}).unwrap());
     }
 }
