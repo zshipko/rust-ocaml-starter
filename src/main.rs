@@ -20,6 +20,8 @@ ocaml::import! {
 
 ////////////////////////////////////////////////////////////////////////////////
 // The first struct example.
+// NOTE: If the OCaml type `MyStruct.t` included a value we couldn't (or didn't
+// want to) wrap, we would use `ocaml::Value` for it.
 #[derive(ocaml::ToValue, ocaml::FromValue, Debug)]
 pub struct MyStructT {
     a: ocaml::Int,
