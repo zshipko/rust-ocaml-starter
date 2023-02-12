@@ -1,4 +1,5 @@
 (executable
  (name rust_ocaml_starter)
  (public_name rust-ocaml-starter)
+ (libraries zarith)
  (modes exe object))
