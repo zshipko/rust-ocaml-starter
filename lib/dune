@@ -1,5 +1,10 @@
 (executable
  (name rust_ocaml_starter)
  (public_name rust-ocaml-starter)
- (libraries zarith)
+ ; Optional: Depend on a library that links in a C library:
+ ; (libraries zarith)
+ ; If you get a linking error, e.g. `ld: cannot find -lgmp: No such file or
+ ; directory` and are on Linux, you may need to explicitly provide the
+ ; following flags:
+ ; (flags -cclib -L/usr/lib/x86_64-linux-gnu)
  (modes exe object))
