@@ -1,1 +1,4 @@
 /target
+/_build
+/_opam
+/.vscode

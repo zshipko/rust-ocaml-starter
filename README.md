@@ -1,6 +1,7 @@
 # rust-ocaml-starter
 
 An example project using [ocaml-rs](https://github.com/zshipko/ocaml-rs) to link an OCaml library into a Rust program.
+This demonstrates both sync and async code using OCaml's Lwt.t.
 
 If you're looking for an example of calling into Rust from OCaml take a look at [ocaml-rust-starter](https://github.com/zshipko/ocaml-rust-starter)
 
@@ -32,13 +33,22 @@ opam update
 opam switch create . ocaml-base-compiler.4.14.0
 eval $(opam env) && opam switch
 opam install dune
+# For the async example.
+opam install lwt cohttp-lwt-unix
 ```
 
-Then:
+Then build and run:
 
-    cargo build
+```
+(
+  export LD_LIBRARY_PATH=_build/default/lib
+  cargo run --release
+)
+```
 
-to run the program:
+Note you must supply `LD_LIBRARY_PATH` because we're using dynamic linking due
+to [an apparent bug in either Dune or OCaml itself](https://github.com/zshipko/rust-ocaml-starter/issues/4).
 
-    cargo run
-
+Also, for some reason `cargo run` sometimes doesn't rebuild the OCaml library.
+In this case, you can manually rebuild the library with `dune build`.
+(Note, `dune build --release` currently doesn't work due to [another possible bug](https://github.com/zshipko/rust-ocaml-starter/issues/5).)
