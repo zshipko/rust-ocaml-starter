@@ -4,7 +4,11 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-ocaml = {git = "https://github.com/zshipko/ocaml-rs"}
+ocaml = { git = "https://github.com/zshipko/ocaml-rs" }
+tokio = { version = "1.25.0", features = ["full"] }
 
 [build-dependencies]
-ocaml-build = {git = "https://github.com/zshipko/ocaml-rs", features=["dune"]}
+cc = { version = "1" }
+ocaml-build = { git = "https://github.com/zshipko/ocaml-rs", features = [
+  "dune"
+] }

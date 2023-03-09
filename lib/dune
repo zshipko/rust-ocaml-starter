@@ -1,4 +1,14 @@
+; The implementation of lwt_poll uses a deprecated module, so we can only build
+; in dev mode if we disable warnings.
+; Unfortunately, we can't build in release mode because of absurd Dune behavior:
+; https://github.com/zshipko/rust-ocaml-starter/issues/5
+(env
+ (dev
+  (flags
+   (:standard -w -A))))
+
 (executable
  (name rust_ocaml_starter)
  (public_name rust-ocaml-starter)
- (modes exe object))
+ (modes exe shared_object)
+ (libraries lwt lwt.unix cohttp-lwt-unix))
